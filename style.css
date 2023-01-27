@@ -4,48 +4,152 @@
     scroll-behavior: smooth;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 #header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 32px;
+    padding: 16px 50px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.25);
+    z-index: 5;
+}
+
+#header h1 {
+    font-weight: 700;
+    margin: 0;
+}
+
+#header a {
+    font-size: large;
+    margin-right: 12px;
+    align-items: center;
+}
+
+#header a:hover {
+    color: rgb(166, 147, 91);
 }
 
 #home {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 50px 50px;
+    padding: 120px 50px;
+    /* border: 1px solid black; */
+}
+
+#resume {
+    border-radius: 10px;
+    background-color: white;
+}
+
+#home-pict img {
+    width: 280px;
+    height: 280px;
 }
 
 #about {
-    padding: 50px 0;
+    padding: 50px;
+    /* border: 1px solid black; */
+}
+
+#about-header {
+    
 }
 
 #about-content{
     padding: 0 50px;
 }
 
+#btn {
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+}
+
+#work {
+    /* border: 1px solid black; */
+    padding: 50px;
+}
 
 #work-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 50px;
+    column-gap: 80px;
 }
 
 #contact {
-    padding: 50px 0;
+    padding: 50px;
+    /* border: 1px solid black; */
 }
 
 #contact-content {
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* align-items: center; */
-    /* justify-content: space-between; */
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "satu tiga"
+    "dua tiga";
     padding: 0 50px;
 }
 
-form {
+#contact-content-detail1 {
+    grid-area: satu;
+}
+
+#contact-content-detail2 {
+    grid-area: dua;
+}
+
+#contact-content-detail3 {
+    grid-area: tiga;
+}
+
+#detail2-sosmed {
+    display: flex;
+    flex-direction: column;
+}
+
+#detail2-sosmed img {
+    width: 36px;
+    height: 36px;
+}
+
+#contact-content-detail2 a:hover {
+    color: rgb(166, 147, 91)
+}
+
+#contact-content-detail3 form {
     border: 1px solid gray;
+    padding: 32px 16px;
+}
+
+.btn {
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 32px;
+}
+
+.input-group label {
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.input-group input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid black;
 }
