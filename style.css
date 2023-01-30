@@ -7,7 +7,19 @@
 }
 
 section {
-    padding: 128px 50px;
+    padding: 128px 50px 0 50px;
+    position: relative;
+}
+
+section::before {
+    content: '';
+    font-size: 60px;
+    font-weight: 600;
+    color: black;
+    opacity: 0.25;
+    position: absolute;
+    top: 46px;
+    left: 30px;
 }
 
 a {
@@ -76,12 +88,17 @@ a {
 }
 
 #home-header a {
-    font-size: 30px;
+    font-size: 20px;
     color: white;
     background-color: black;
     border: 1px solid black;
     border-radius: 22px;
     padding: 12px;
+}
+
+#home-header a:hover {
+    background-color: white;
+    color: black;
 }
 
 #home-pict {
@@ -103,11 +120,13 @@ a {
 
 #home-arrow a {
     color: rgb(184, 167, 170);
+    font-size: 18px;
 }
 
 #home-arrow img {
-    width: 60px;
+    width: 66px;
     animation: 2s upDown infinite;
+    padding-bottom: 4px;
 }
 
 @keyframes upDown {
@@ -124,14 +143,42 @@ a {
     }
 }
 
+#about::before {
+    content: "ABOUT";
+}
+
 #about-content{
     padding: 0 50px;
 }
 
+#about-detail-exp {
+    margin-top: 24px;
+}
+
+#about-detail-exp > p {
+    display: none;
+}
+
+.about-detail-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 #btn {
-    border-radius: 10px;
+    border-radius: 16px;
     background-color: black;
     color: white;
+    padding: 6px;
+}
+
+#btn:hover, #btn:active {
+    background-color: white;
+    color: black;
+}
+
+#work::before {
+    content: "WORK";
 }
 
 #work-content {
@@ -140,6 +187,10 @@ a {
     justify-content: space-between;
     padding: 0 50px;
     column-gap: 80px;
+}
+
+#contact::before {
+    content: "CONTACT";
 }
 
 #contact-content {
@@ -178,7 +229,7 @@ a {
 }
 
 #contact-content-detail3 form {
-    border: 1px solid gray;
+    border: 2px solid gray;
     padding: 32px 16px;
 }
 
