@@ -22,11 +22,13 @@
         </nav>
     </header>
     <section id="home">
-        <div id="home-header">
-            <h3>Hi! I Am</h3>
-            <h1>Kartika</h1>
-            <p>Lorem ipsum dolor sit amet consectetur.</p>
-            <a href="hello.txt" download>Resume</a>
+        <div id="home-text">
+            <div id="home-header">
+                <h3>Hi! I Am</h3>
+                <h1>Kartika</h1>
+                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <a href="hello.txt" download>Resume</a>
+            </div>
         </div>
         <div id="home-pict">
             <img src="images/potrait.png" alt="foto diri">
@@ -98,31 +100,31 @@
             </div>
             <div id="contact-content-detail2">
                 <div id="detail2-sosmed">
-                    <img src="images/instagram-logo.png" alt="">
+                    <img src="images/instagram-logo.png" alt="instagram-logo">
                     <a href="https://www.instagram.com/karka18/" target="_blank">Instagram</a>
                 </div>
                 <div id="detail2-sosmed">
-                    <img src="images/github.png" alt="">
+                    <img src="images/github.png" alt="github-logo">
                     <a href="https://github.com/kartika18" target="_blank">GitHub</a>
                 </div>
             </div>
             <div id="contact-content-detail3">
-                <form action="">
-                    <div class="form-group">
-                        <div id="input-name" class="input-group">
-                            <label for="">Name</label>
-                            <input type="text" placeholder="example: @mail.com">
-                        </div>
-                        <div id="input-subject" class="input-group">
-                            <label for="">Subject</label>
-                            <input type="text" placeholder="Your Subject">
-                        </div>
-                        <div id="input-message" class="input-group">
-                            <label for="">Message</label>
-                            <input type="text" placeholder="Your Message">
-                        </div>
+                <form class="contact-form" onsubmit="onFormSubmit(event)">
+                    <div class="input-group">
+                        <label for="input-email">Email</label>
+                        <input type="email" id="input-email" placeholder="example: @mail.com">
                     </div>
-                    <button class="btn">Submit</button>
+                    <div class="input-group">
+                        <label for="input-subject">Subject</label>
+                        <input type="text" id="input-subject" placeholder="Your Subject">
+                    </div>
+                    <div class="input-group">
+                        <label for="input-message">Message</label>
+                        <input type="text" id="input-message" placeholder="Your Message">
+                    </div>
+                    <div>
+                        <button type="submit" class="btn-form-contact">Submit</button>
+                    </div>
                 </form>
             </div>
         </div>
