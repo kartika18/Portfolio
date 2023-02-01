@@ -3,7 +3,6 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     color: rgb(184, 167, 170);
-    background-color: rgb(72, 55, 61);
 }
 
 section {
@@ -46,7 +45,11 @@ a {
     background-color: white;
 }
 
-#header nav {
+.navbar {
+    background-color: white;
+}
+
+.nav-item {
     background-color: white;
 }
 
@@ -67,6 +70,7 @@ a {
     grid-template-areas: 
     "satu dua"
     "tiga tiga";
+    background-color: rgb(72, 55, 61);
 }
 
 #home-text {
@@ -148,6 +152,10 @@ a {
     }
 }
 
+#about {
+    background-color: rgb(72, 55, 61);
+}
+
 #about::before {
     content: "ABOUT";
 }
@@ -180,6 +188,10 @@ a {
 #btn:hover, #btn:active {
     background-color: white;
     color: black;
+}
+
+#work {
+    background-color: rgb(72, 55, 61);
 }
 
 #work::before {
@@ -243,13 +255,17 @@ a {
     font-size: 30px;
 }
 
+#contact {
+    background-color: rgb(72, 55, 61);
+}
+
 #contact::before {
     content: "CONTACT";
 }
 
 #contact-content {
     display: grid;
-    grid-template-rows: 1fr;
+    grid-template-columns: 60% 40%;
     grid-template-areas: 
     "satu tiga"
     "dua tiga";
@@ -259,8 +275,7 @@ a {
 #contact-content-detail1 {
     grid-area: satu;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-end;
     padding-right: 80px;
 }
 
@@ -268,6 +283,7 @@ a {
     grid-area: dua;
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
     gap: 32px;
 }
 
@@ -287,25 +303,28 @@ a {
     height: 48px;
 }
 
-#contact-content-detail2 a:hover {
+#detail2-sosmed div:hover {
     color: rgb(166, 147, 91)
 }
 
 #contact-content-detail3 form {
-    border: 2px solid black;
+    border: 3px solid black;
     padding: 32px 24px;
 }
 
-.btn-form-contact {
-    display: flex;
-    justify-content: center;
+.btn-form {
     border-radius: 20px;
     background-color: black;
     color: white;
     padding: 6px 8px;
 }
 
-.btn-form-contact:hover {
+.button-contact-form {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-form:hover {
     background-color: white;
     color: black;
 }
@@ -324,4 +343,5 @@ a {
 .input-group input {
     border: none;
     border-bottom: 3px solid rgba(0, 0, 0, 0.25);
+    background-color: rgb(72, 55, 61);
 }
