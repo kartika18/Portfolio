@@ -1,12 +1,12 @@
 * {
     font-family: "Josefin Sans";
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     scroll-behavior: smooth;
     color: rgb(184, 167, 170);
 }
 
 section {
-    padding: 128px 50px;
+    padding: 128px;
     position: relative;
 }
 
@@ -30,7 +30,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px 50px;
+    padding: 16px 128px;
     position: sticky;
     top: 0;
     background-color: white;
@@ -125,7 +125,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 80px;
 }
 
 #home-arrow a {
@@ -158,10 +158,6 @@ a {
 
 #about::before {
     content: "ABOUT";
-}
-
-#about-content{
-    padding: 0 50px;
 }
 
 #about-detail-exp {
@@ -201,7 +197,6 @@ a {
 #work-content {
     display: flex;
     align-items: center;
-    padding: 0 50px;
     column-gap: 80px;
 }
 
@@ -269,7 +264,6 @@ a {
     grid-template-areas: 
     "satu tiga"
     "dua tiga";
-    padding: 0 50px;
 }
 
 #contact-content-detail1 {
@@ -344,4 +338,78 @@ a {
     border: none;
     border-bottom: 3px solid rgba(0, 0, 0, 0.25);
     background-color: rgb(72, 55, 61);
+}
+
+@media only screen and (max-width: 768px) {
+    #home {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: "dua" "satu" "tiga";
+        padding-top: 48px;
+    }
+
+    #home-text {
+        grid-area: satu;
+        margin-bottom: 32px;
+    }
+
+    #home-pict {
+        grid-area: dua;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 32px;
+    }
+
+    #home-arrow {
+        grid-area: tiga;
+        margin-top: 0;
+    }
+
+    #work-content {
+        display: grid;
+        grid-template-areas: "satu" "dua";
+    }
+
+    #work-detail {
+        grid-area: satu;
+        margin: 32px 0 32px 0;
+    }
+
+    #work-detail-img {
+        grid-area: dua;
+    }
+
+    #contact-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "satu satu"
+        "dua dua"
+        "tiga tiga";
+    }
+
+    #contact-content-detail1 {
+        margin-bottom: 16px;
+    }
+
+    #contact-content-detail2 {
+        margin-bottom: 32px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    #work-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "satu satu" "dua dua";
+    }
+
+    #work-detail {
+        grid-area: satu;
+        margin: 32px 0 32px 0;
+    }
+
+    #work-detail-img {
+        grid-area: dua;
+    }
 }
